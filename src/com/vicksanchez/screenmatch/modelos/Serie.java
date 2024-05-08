@@ -8,7 +8,7 @@ public class Serie extends Titulo {
 
     @Override // notacion para indicar una sobreescritura de métodos
     public int getDuracionEnMinutos(){
-        return super.getDuracionEnMinutos();
+        return minutosPorEpisodio * temporadas * episodiosPorTemporada;
     }
 
     public int getTemporadas() {
