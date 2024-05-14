@@ -1,7 +1,5 @@
 package com.vicksanchez.screenmatch.calculos;
 
-import com.vicksanchez.screenmatch.modelos.Pelicula;
-import com.vicksanchez.screenmatch.modelos.Serie;
 import com.vicksanchez.screenmatch.modelos.Titulo;
 
 public class CalculadoraDeTiempo {

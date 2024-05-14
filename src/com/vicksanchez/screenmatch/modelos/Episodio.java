@@ -6,6 +6,15 @@ public class Episodio implements Clasificacion {
     private int numero;
     private String nombre;
     private Serie serie;
+
+    public int getTotalDeVisualizaciones() {
+        return totalDeVisualizaciones;
+    }
+
+    public void setTotalDeVisualizaciones(int totalDeVisualizaciones) {
+        this.totalDeVisualizaciones = totalDeVisualizaciones;
+    }
+
     private int totalDeVisualizaciones;
 
     public int getNumero() {
