@@ -1,0 +1,18 @@
+[
+  {
+    "Nombre": "Matrix",
+    "FechaDeLanzamiento": 1993,
+    "DuracionEnMinutos": 60,
+    "IncluidoEnElPlan": false,
+    "SumaEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  },
+  {
+    "Nombre": "Top Gun",
+    "FechaDeLanzamiento": 1986,
+    "DuracionEnMinutos": 109,
+    "IncluidoEnElPlan": false,
+    "SumaEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  }
+]

@@ -1,5 +1,7 @@
 package com.vicksanchez.screenmatch.modelos;
 
+import com.vicksanchez.screenmatch.excepciones.ErrorEnConversionDuracionException;
+
 public class Titulo implements Comparable<Titulo> {
     private String nombre;
     private int fechaDeLanzamiento;
@@ -17,7 +19,10 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(TituloOmdb miTituloOmdb) {
         this.nombre = miTituloOmdb.title();
         this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.year());
-        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,2));
+        if (miTituloOmdb.runtime().contains("N/A")){
+            throw new ErrorEnConversionDuracionException("No pude convertir la duracion, ya que contien N/A");
+        }
+        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,3).replace(" ", ""));
     }
 
     public String getNombre() {
@@ -78,8 +83,6 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "nombre='" + nombre + '\'' +
-                ", fechaDeLanzamiento=" + fechaDeLanzamiento +
-                ", duracion= " + duracionEnMinutos;
+        return "(nombre='" + nombre + ", fechaDeLanzamiento=" + fechaDeLanzamiento + ", duracion=" + duracionEnMinutos + ")";
     }
 }
